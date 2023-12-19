@@ -1,0 +1,84 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Celsius",
+      "request": "launch",
+      "mainClass": "Celsius",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "Data",
+      "request": "launch",
+      "mainClass": "Data",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "DeuxiemeExemple",
+      "request": "launch",
+      "mainClass": "DeuxiemeExemple",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "MonChar",
+      "request": "launch",
+      "mainClass": "MonChar",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "Pile",
+      "request": "launch",
+      "mainClass": "Pile",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "PremierExemple",
+      "request": "launch",
+      "mainClass": "PremierExemple",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "Saisie",
+      "request": "launch",
+      "mainClass": "Saisie",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "Saisie2",
+      "request": "launch",
+      "mainClass": "Saisie2",
+      "projectName": "TP1_41f9b723"
+    },
+    {
+      "type": "java",
+      "name": "TestPile",
+      "request": "launch",
+      "mainClass": "TestPile",
+      "projectName": "TP1_41f9b723"
+    }
+  ]
+}
