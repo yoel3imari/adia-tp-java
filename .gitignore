@@ -1,0 +1,5 @@
+**/lib
+**/.vscode
+**/README.md
+**/bin
+**/*.iml
