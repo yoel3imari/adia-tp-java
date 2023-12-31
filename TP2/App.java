@@ -1,3 +1,5 @@
+import java.util.StringTokenizer;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -26,5 +28,9 @@ public class App {
         if( s1 == s3 ) {
             System.out.println("s1 == s3");
         }
+
+        Voiture vv = new Voiture();
+        Moteur mm = new Moteur(vv);
+
     }
 }

@@ -8,8 +8,13 @@ public class Moteur {
     }
 
     Moteur(int p, Voiture v) {
-        puissance = p;
+        this(p);
         this.voiture = v;
+    }
+
+    Moteur(Voiture v) {
+        this.voiture = v;
+        this.voiture.setMoteur(this);
     }
 
     Moteur(Moteur copy){

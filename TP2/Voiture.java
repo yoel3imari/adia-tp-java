@@ -14,12 +14,36 @@ public class Voiture {
 
 
    public Voiture(int puissance) {
+       this.vitesse = 0;
+       this.estDemarre = false;
        this.moteur = new Moteur(puissance, this);
        for (int i = 0; i < 4; i++) {
            Roue roue = new Roue();
            les4Roues.add(roue);
        };
    }
+
+   public Voiture (String modele, String marque, Double vitesse, Moteur moteur, ArrayList<Roue> roues, Roue secours) {
+       this.estDemarre = true;
+
+       this.modele = modele;
+       this.marque = marque;
+       this.vitesse = vitesse;
+
+       this.moteur = moteur;
+       les4Roues = roues;
+       roueDeSecours = secours;
+   }
+
+    public Voiture() {
+        this.vitesse = 0;
+        this.estDemarre = false;
+        this.moteur = new Moteur(0, this);
+        for (int i = 0; i < 4; i++) {
+            Roue roue = new Roue();
+            les4Roues.add(roue);
+        };
+    }
 
     @Override
     public String toString() {
@@ -32,27 +56,29 @@ public class Voiture {
 
     /**
      * on utilise le constructeur du moteur pour créer un nouveau moteur et éviter
-     * le cas où plusieures voitures ont le même moteur
+     * le cas d'avoir plusieur moteur pour la même voiture
      * puis on passe cette voiture au nouveau moteur
      *
      * @param neuf
      */
     public void changerLeMoteur(Moteur neuf) {
-       moteur = new Moteur(neuf);
-       moteur.setVoiture(this);
+        if( moteur.getPuissance() > 300_000 ) {
+            // copier
+            moteur = new Moteur(neuf);
+        }
    }
 
     public void demarre (){ setEstDemarre(true); }
 
     /**
-     * on accelère par un coefficient et on utilise setVitesse pour mettre
-     * à jour la vitesse du voiture
+     * Si la voiture est demarré  on ajoute le coef à la vitesse actuelle
      *
      * @param coef
      */
     public void accelere (double coef) {
-       double tmp = vitesse + (vitesse*coef)/100;
-       setVitesse(tmp);
+        if( estDemarre ) {
+            setVitesse(this.vitesse + coef);
+        }
    }
 
     /** SETTERS **/
