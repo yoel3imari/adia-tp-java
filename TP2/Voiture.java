@@ -6,10 +6,8 @@ public class Voiture {
     private String marque;
     private double vitesse;
     private boolean estDemarre;
-
     private Moteur moteur;
-
-    private ArrayList<Roue> les4Roues = new ArrayList<>();
+    private Roue[] les4Roues = new Roue[4];
     private Roue roueDeSecours;
 
 
@@ -18,12 +16,11 @@ public class Voiture {
        this.estDemarre = false;
        this.moteur = new Moteur(puissance, this);
        for (int i = 0; i < 4; i++) {
-           Roue roue = new Roue();
-           les4Roues.add(roue);
+           les4Roues[i] = new Roue();
        };
    }
 
-   public Voiture (String modele, String marque, Double vitesse, Moteur moteur, ArrayList<Roue> roues, Roue secours) {
+   public Voiture (String modele, String marque, Double vitesse, Moteur moteur, Roue[] roues, Roue secours) {
        this.estDemarre = true;
 
        this.modele = modele;
@@ -40,8 +37,7 @@ public class Voiture {
         this.estDemarre = false;
         this.moteur = new Moteur(0, this);
         for (int i = 0; i < 4; i++) {
-            Roue roue = new Roue();
-            les4Roues.add(roue);
+            les4Roues[i] = new Roue();
         };
     }
 
@@ -103,7 +99,7 @@ public class Voiture {
         this.moteur = moteur;
     }
 
-    public void setLes4Roues(ArrayList<Roue> les4Roues) {
+    public void setLes4Roues(Roue[] les4Roues) {
         this.les4Roues = les4Roues;
     }
 
@@ -121,7 +117,7 @@ public class Voiture {
         return moteur;
     }
 
-    public ArrayList<Roue> getLes4Roues() {return les4Roues;}
+    public Roue[] getLes4Roues() {return les4Roues;}
 
     public Roue getRoueDeSecours() {
         return roueDeSecours;

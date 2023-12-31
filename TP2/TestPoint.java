@@ -1,6 +1,11 @@
 public class TestPoint {
   
   public static void main (String[] args) {
+    Point point = new Point();
+    point.setX(3);
+    point.setY(5);
+    System.out.println(point.getX());
+    System.out.println(point.getY());
 
     /* ----------- partie 2 ----------- */
 
